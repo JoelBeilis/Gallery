@@ -28,7 +28,7 @@ let imagesArray = Array.from(images);
 
 // When an image is clicked, show the lightbox
 images.forEach((image, index) => {
-    image.addEventListener('click', () => {
+    image.querySelector('img').addEventListener('click', () => {
         currentImageIndex = index;
         openLightbox(image.querySelector('img').src);
     });
@@ -36,7 +36,7 @@ images.forEach((image, index) => {
 
 function openLightbox(src) {
     lightboxImg.src = src;
-    lightbox.style.display = 'flex';
+    lightbox.style.display = 'flex'; // Show the lightbox
     closeBtn.style.display = 'block';
     fullscreenBtn.style.display = 'block';
     slideshowBtn.style.display = 'block';
@@ -45,7 +45,7 @@ function openLightbox(src) {
 }
 
 function closeLightbox() {
-    lightbox.style.display = 'none';
+    lightbox.style.display = 'none'; // Hide the lightbox
     closeBtn.style.display = 'none';
     fullscreenBtn.style.display = 'none';
     slideshowBtn.style.display = 'none';
@@ -65,10 +65,18 @@ prevArrow.addEventListener('click', () => {
     openLightbox(imagesArray[currentImageIndex].querySelector('img').src);
 });
 
-// Fullscreen functionality
+// Fullscreen toggle functionality
 fullscreenBtn.addEventListener('click', () => {
-    if (lightbox.requestFullscreen) {
-        lightbox.requestFullscreen();
+    if (!document.fullscreenElement) {
+        if (lightbox.requestFullscreen) {
+            lightbox.requestFullscreen();
+        }
+        fullscreenBtn.textContent = '⤒'; // Exit Fullscreen icon
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+        fullscreenBtn.textContent = '⤢'; // Enter Fullscreen icon
     }
 });
 
@@ -76,12 +84,12 @@ fullscreenBtn.addEventListener('click', () => {
 let slideshowInterval;
 slideshowBtn.addEventListener('click', () => {
     if (!slideshowInterval) {
-        slideshowBtn.textContent = '⏸';
+        slideshowBtn.textContent = '⏸'; // Pause button
         slideshowInterval = setInterval(() => {
             nextArrow.click();
-        }, 3000);
+        }, 2000);
     } else {
-        slideshowBtn.textContent = '▶';
+        slideshowBtn.textContent = '▶'; // Play button
         clearInterval(slideshowInterval);
         slideshowInterval = null;
     }
