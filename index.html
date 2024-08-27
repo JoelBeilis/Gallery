@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ice_cream_turtle Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ice_cream_turtle Gallery</h1>
+        <a href="#" target="_blank" id="https://www.instagram.com/ice_cream_turtle/">Instagram</a>
+    </header>
+
+    <section id="filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sunset">Sunset</button>
+        <button class="filter-btn" data-filter="mountains">Mountains</button>
+        <button class="filter-btn" data-filter="winter">Winter</button>
+        <button class="filter-btn" data-filter="space">Space</button>
+    </section>
+
+    <section id="gallery">
+        <div class="image-container" data-category="sunset">
+            <img src="assets/img_01.jpg" alt="Image 1">
+        </div>
+        <div class="image-container" data-category="mountains">
+            <img src="assets/img_02.jpg" alt="Image 2">
+        </div>
+        <div class="image-container" data-category="winter">
+            <img src="assets/img_03.jpg" alt="Image 3">
+        </div>
+        <div class="image-container" data-category="space">
+            <img src="assets/img_04.jpg" alt="Image 4">
+        </div>
+    </section>
+
+    <div id="lightbox" class="hidden">
+        <span id="close-btn">×</span>
+        <span id="fullscreen-btn">⤢</span>
+        <span id="slideshow-btn">▶</span>
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+        <span id="prev-arrow">◀</span>
+        <span id="next-arrow">▶</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
