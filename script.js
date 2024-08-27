@@ -26,6 +26,7 @@ const nextArrow = document.getElementById('next-arrow');
 let currentImageIndex = 0;
 let imagesArray = Array.from(images);
 
+// When an image is clicked, show the lightbox
 images.forEach((image, index) => {
     image.addEventListener('click', () => {
         currentImageIndex = index;
@@ -35,11 +36,21 @@ images.forEach((image, index) => {
 
 function openLightbox(src) {
     lightboxImg.src = src;
-    lightbox.classList.remove('hidden');
+    lightbox.style.display = 'flex';
+    closeBtn.style.display = 'block';
+    fullscreenBtn.style.display = 'block';
+    slideshowBtn.style.display = 'block';
+    prevArrow.style.display = 'block';
+    nextArrow.style.display = 'block';
 }
 
 function closeLightbox() {
-    lightbox.classList.add('hidden');
+    lightbox.style.display = 'none';
+    closeBtn.style.display = 'none';
+    fullscreenBtn.style.display = 'none';
+    slideshowBtn.style.display = 'none';
+    prevArrow.style.display = 'none';
+    nextArrow.style.display = 'none';
 }
 
 closeBtn.addEventListener('click', closeLightbox);
