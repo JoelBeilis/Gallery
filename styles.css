@@ -145,21 +145,39 @@ footer {
 }
 
 #lightbox {
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none; /* Initially hidden */
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
     justify-content: center;
-    transition: opacity 0.3s;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column; /* Stack the image and metadata vertically */
 }
 
 #lightbox img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 80vh; /* Keep the image responsive and within viewport */
+    margin-bottom: 10px;
+}
+
+#image-info {
+    display: flex;
+    justify-content: center; /* Center the metadata section */
+    align-items: center;
+    gap: 20px; /* Add some space between metadata items */
+    color: white;
+    font-size: 1rem;
+}
+
+#image-info p {
+    margin: 0;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 #close-btn, #fullscreen-btn, #slideshow-btn {
