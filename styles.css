@@ -78,18 +78,19 @@ footer {
 #filters {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows the filters to wrap onto the next line */
     margin: 20px 0;
 }
 
 .filter-btn {
-    margin: 0 15px; /* Adjust spacing between buttons */
+    margin: 10px 15px; /* Add some margin around buttons to ensure spacing when wrapping */
     padding: 10px 0;
     cursor: pointer;
     background: none;
-    color: black; /* Light text color */
+    color: black;
     border: none;
-    font-size: 1.2rem; /* Slightly larger font */
-    font-family: 'Arial', sans-serif; /* Use a clean font */
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
     position: relative;
     text-transform: uppercase;
@@ -97,6 +98,7 @@ footer {
     transition: color 0.3s ease;
     outline: none;
 }
+
 
 .filter-btn:hover {
     color: grey; /* Light gray color on hover */
