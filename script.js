@@ -87,13 +87,16 @@ closeBtn.addEventListener('click', closeLightbox);
 
 nextArrow.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex + 1) % imagesArray.length;
-    openLightbox(imagesArray[currentImageIndex].querySelector('img').src);
+    const nextImageContainer = imagesArray[currentImageIndex];
+    openLightbox(nextImageContainer.querySelector('img').src, nextImageContainer);
 });
 
 prevArrow.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex - 1 + imagesArray.length) % imagesArray.length;
-    openLightbox(imagesArray[currentImageIndex].querySelector('img').src);
+    const prevImageContainer = imagesArray[currentImageIndex];
+    openLightbox(prevImageContainer.querySelector('img').src, prevImageContainer);
 });
+
 
 // Fullscreen toggle functionality
 fullscreenBtn.addEventListener('click', () => {
