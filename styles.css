@@ -151,6 +151,14 @@ footer {
 .image-container {
     overflow: hidden;
     cursor: pointer;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.image-container.visible {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .image-container img {
