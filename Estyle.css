@@ -79,7 +79,10 @@ a {
 }
 
 .equipment-section {
-    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Space between boxes */
+    padding: 20px;
     background-color: black;
 }
 
@@ -89,23 +92,21 @@ a {
     gap: 20px;
     background-color: white;
     padding: 20px;
-    margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100vw; /* Ensures full-width boxes */
-    max-width: 100%;
-    transform: translateY(50px); /* Initial position for animation */
-    opacity: 0; /* Start transparent */
+    transform: translateY(50px);
+    opacity: 0;
+    border-radius: 25px;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .equipment-box.visible {
-    transform: translateY(0); /* Final position for animation */
-    opacity: 1; /* Fully visible */
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .equipment-image {
     width: 40%;
-    max-width: 300px;
+    max-width: 150px;
     border-radius: 8px;
 }
 
@@ -133,4 +134,11 @@ a {
 .equipment-details p {
     font-size: 1rem;
     color: #666;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .equipment-section {
+        grid-template-columns: 1fr; /* Stacks items in a single column */
+    }
 }
