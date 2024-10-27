@@ -1,3 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
 header {
     background-image: url(assets/Equipment-3.jpg);
     background-size: cover;
@@ -69,4 +76,61 @@ a {
 
 .instagram-text:hover, .index-link:hover {
     color: #ff007f;
+}
+
+.equipment-section {
+    padding: 20px 0;
+    background-color: black;
+}
+
+.equipment-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100vw; /* Ensures full-width boxes */
+    max-width: 100%;
+    transform: translateY(50px); /* Initial position for animation */
+    opacity: 0; /* Start transparent */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.equipment-box.visible {
+    transform: translateY(0); /* Final position for animation */
+    opacity: 1; /* Fully visible */
+}
+
+.equipment-image {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.equipment-details {
+    flex: 1;
+}
+
+.equipment-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.equipment-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.equipment-details ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.equipment-details p {
+    font-size: 1rem;
+    color: #666;
 }

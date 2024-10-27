@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 header {
@@ -30,6 +31,7 @@ header h1 {
 
 h2 {
     font-size: 1rem;
+    color: white;
     text-align: center;
     font-family: 'Arial', sans-serif;
 }
@@ -86,7 +88,7 @@ footer {
     padding: 20px;
     font-size: 1rem;
     font-family: 'Arial', sans-serif;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 #instagram-link {
@@ -106,7 +108,7 @@ footer {
     padding: 10px 0;
     cursor: pointer;
     background: none;
-    color: black;
+    color: white;
     border: none;
     font-size: 1.2rem;
     font-family: 'Arial', sans-serif;
@@ -119,7 +121,7 @@ footer {
 }
 
 .filter-btn:hover {
-    color: grey;
+    color: lightsteelblue;
 }
 
 .filter-btn::before {
@@ -129,7 +131,7 @@ footer {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #ccc;
+    background-color: lightsteelblue;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
