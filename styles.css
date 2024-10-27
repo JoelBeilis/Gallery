@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: url(assets/HeaderBG.png);
+    background-image: url(equipment/HeaderBG.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

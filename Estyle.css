@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: url(assets/Equipment-3.jpg);
+    background-image: url(equipment/Equipment-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
