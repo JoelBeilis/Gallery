@@ -1,0 +1,72 @@
+header {
+    background-image: url(assets/Equipment-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns items to the right */
+    justify-content: flex-start; /* Aligns items vertically from the top */
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    text-align: right;
+}
+
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for contact info */
+.contact-info-container {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-end; /* Aligns items to the right */
+    gap: 20px; /* Space between Instagram link and Equipment link */
+    margin-top: 10px;
+}
+
+/* Instagram icon and text alignment */
+.instagram-container {
+    display: flex;
+    align-items: center; /* Aligns icon and text vertically */
+}
+
+.instagram-icon {
+    width: 35px; /* Adjust icon size as needed */
+    height: 35px;
+    margin-right: 8px; /* Space between icon and link */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Link styling */
+a {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+.instagram-text, .index-link {
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.instagram-text:hover, .index-link:hover {
+    color: #ff007f;
+}
