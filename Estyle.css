@@ -78,6 +78,59 @@ a {
     color: #ff007f;
 }
 
+
+/*------FILTERS SECTION------*/
+
+
+#filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    margin: 10px 15px;
+    padding: 10px 0;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    outline: none;
+}
+
+.filter-btn:hover {
+    color: lightsteelblue;
+}
+
+.filter-btn::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: lightsteelblue;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter-btn:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+
+/*------EQUIPMENT SECTION------*/
+
+
 .equipment-section {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns */
